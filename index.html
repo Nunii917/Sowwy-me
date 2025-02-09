@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgive Me?</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background-color: white;
+            padding: 50px;
+        }
+        .container {
+            display: block;
+        }
+        .hidden {
+            display: none;
+        }
+        img {
+            width: 300px;
+            border-radius: 10px;
+        }
+        h1 {
+            color: #ff4d6d;
+        }
+        .btn {
+            background-color: green;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 20px;
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .btn:hover {
+            background-color: darkgreen;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="first-screen" class="container">
+        <h1>Did you forgive me?</h1>
+        <img src="https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif" alt="Cute kitten">
+        <br><br>
+        <button class="btn" onclick="showSecondScreen()">Yes</button>
+        <button class="btn" onclick="showSecondScreen()">Yes</button>
+        <br><br>
+        <img src="https://media.giphy.com/media/MDJ9IbxxvDUQM/giphy.gif" alt="Sad kitten">
+    </div>
+
+    <div id="second-screen" class="container hidden">
+        <h1>I knew you would forgive me!</h1>
+        <img src="https://media.giphy.com/media/3o7abldj0b3rxrZUxW/giphy.gif" alt="Dancing gif">
+        <br><br>
+        <img src="https://media.giphy.com/media/l3q2K5jinAlChoCLS/giphy.gif" alt="Happy kitten">
+    </div>
+
+    <script>
+        function showSecondScreen() {
+            document.getElementById('first-screen').classList.add('hidden');
+            document.getElementById('second-screen').classList.remove('hidden');
+        }
+    </script>
+
+</body>
+</html>
